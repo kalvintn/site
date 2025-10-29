@@ -1,0 +1,202 @@
+/* GLOBAL */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main-body {
+    background-color: black;
+    font-family: "Radio Canada", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+
+/* MAIN IMAGE */
+img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+/* CONTROL BUTTONS */
+.button-group {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.button-group button {
+    font-weight: 500;
+    background: #9796f0;
+    background: -webkit-linear-gradient(to right, #9796f0, #fbc7d4);
+    background: linear-gradient(to right, #9796f0, #fbc7d4);
+    padding: 7px;
+    border: 3px solid #9796f0;
+    border-radius: 10%;
+}
+/* congrats button */
+.hidden {
+    display: none;
+}
+.congrats {
+    width: fit-content;
+
+    background: #0cebeb;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #29ffc6, #20e3b2, #0cebeb);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #29ffc6, #20e3b2, #0cebeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding: 8px;
+    border: none;
+}
+
+
+
+
+
+/* HOW TO PLAY MODAL */
+.highlight {
+    background-color: yellow;
+}
+
+
+
+
+
+/* WORDMAP MODAL */
+#modal_word .modal-body {
+    margin: 0 auto;
+}
+#modal_word p {
+    color: red;
+}
+table tr td {
+    text-align: center;
+    padding: 8px;
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+
+
+
+
+
+/* NOTEPAD MODAL */
+#notepad_text {
+    resize: none;
+    outline: none;
+    width: 100%;
+    height: 500px;
+    padding: 29px 0 0 20px;
+    line-height: 28px;
+    background: #fff url("https://cdn2.vectorstock.com/i/1000x1000/69/96/realistic-notepad-template-vector-21716996.jpg") no-repeat -290px -130px;
+}
+
+
+
+
+
+/* SUBMIT MODAL */
+#modal_submit .modal-body {
+    margin: 0 auto;
+}
+.submission_area {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 10px; /* Adjust the gap between grid items as needed */
+    margin: 1em auto;
+}
+.word_box {
+    display: block;
+}
+.letter-box {
+    font-weight: bold;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #04351f;
+    border-radius: 50%;
+    background-color: lightblue;
+    text-align: center;
+    line-height: 40px;
+    margin: 5px;
+}
+.row-final {
+    background-color: rgb(89, 71, 158);
+    color: white;
+}
+/* output messages */
+#output_message {
+    width: 100%;
+    height: 1em;
+}
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
+.black {
+    color: black;
+}
+/* last password */
+.final-state .modal-content {
+    color: white;
+    animation: scroll 100s linear infinite;
+    background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"),
+      #111111;
+    height: 100%;
+    width: 100%;
+    perspective: 500px;
+    perspective-origin: 50% 50%;
+}
+.final-state .letter-box {
+    color: black;
+}
+@keyframes scroll {
+    100% {
+        background-position: 0px -400%;
+    }
+}
+
+
+
+
+
+/* CREDITS MODAL */
+#modal_credits .modal-body p:not(:last-child) {
+    text-align: center;
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .button-group {
+        position: absolute;
+        bottom: 30px;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+    .button-group button {
+        border-radius: 3%;
+    }
+}
+
+
+
+
+
+  
+  

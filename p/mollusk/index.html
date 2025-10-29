@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Kalvin Nguyen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mollusk</title>
+
+    <!-- icons -->
+    <link rel="icon" type="image/x-icon" href="./assets/indiv_icons/shell.svg">
+    <script src="https://kit.fontawesome.com/f773a491f7.js" crossorigin="anonymous"></script>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+    <!-- links -->
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+
+
+
+<body class="main-body">
+    <!-- main image-->
+    <img src="./assets/group_icons/scene.png"/>
+
+    <!-- hidden victory contents -->
+    <img src="./assets/group_icons/winners.png" class="hidden">
+    <audio class="music" autoplay loop muted>
+        <source src="./assets/stefan_kartenberg.mp3" type="audio/mpeg">
+        <source src="./assets/stefan_kartenberg.wav" type="audio/wav">
+    </audio>
+
+
+    <!-- gameplay buttons -->
+    <div class="button-group">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#modal_howto">How to Play <i class="fa-solid fa-question"></i></button>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#modal_word">Word Map <i class="fa-regular fa-map"></i></button>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#modal_notepad">Notepad <i class="fa-regular fa-clipboard"></i></button>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#modal_submit">Submit Answers <i class="fa-solid fa-check"></i></button>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#modal_credits">Credits <i class="fa-solid fa-film"></i></button>   
+        <button type="button" class="hidden congrats" data-bs-toggle="modal" data-bs-target="#modal_congrats">Congratulations! <i class="fa-solid fa-gift"></i></button>   
+    </div>
+    
+
+
+    <!-- modal: how to play -->
+    <div class="modal fade" id="modal_howto" tabindex="-1" aria-labelledby="modal_howto" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- HEADER -->
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="how_to_play_title">How to Play</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- BODY -->
+            <div class="modal-body">
+                <p> Welcome to <strong>the mollusk.</strong> This scenery is your only clue. Find and decipher five 
+                six-letter passwords. Then, use them to solve for one final password. Furthermore, guesses 
+                must be substantiated. Type your guess <strong>and</strong> choose the correct word from the provided
+                <span class="highlight">word map</span> that explains the source of your answer. For example, a password [bubble] with the 
+                source [hourglass] is a potential solution. Use the notepad as you wish. Good luck!</p>
+                <p>For better accessibility, <a href="./assets/group_icons/scene.png" download="the_library">download this image.</a></p>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Got it!</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+    <!-- modal: word map-->
+    <div class="modal fade" id="modal_word" tabindex="-1" aria-labelledby="modal_word" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- HEADER -->
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Word Map</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- BODY -->
+            <div class="modal-body">
+                <p>Which ones could it be?</p>
+                <table>
+                    <tr>
+                        <td>Plugs</td> <td>Rewind</td> <td>Puzzle</td> <td>Cycles</td> <td>Miracle</td>
+                    </tr>
+
+                    <tr>
+                        <td>Holy</td> <td>Love</td> <td>Comb</td> <td>Indoors</td> <td>Ellipse</td>
+                    </tr>
+
+                    <tr>
+                        <td>Travel</td> <td>Scents</td> <td>Gems</td> <td>Reverse</td> <td>Prints</td>
+                    </tr>
+
+                    <tr>
+                        <td>Ducks</td> <td>Medina</td> <td>Trio</td> <td>Model</td> <td>Flora</td>
+                    </tr>
+
+                    <tr>
+                        <td>Novel</td> <td>Reminder</td> <td>QR</td> <td>Safari</td> <td>Signs</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+    <!-- modal: notepad -->
+    <div class="modal fade" id="modal_notepad" tabindex="-1" aria-labelledby="modal_notepad" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- MODAL BODY -->
+            <div class="modal-body">
+                <textarea id="notepad_text"></textarea>
+            </div>
+
+            <!-- MODAL FOOTER -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+     <!-- modal submit -->
+     <div class="modal fade" id="modal_submit" tabindex="-1" aria-labelledby="submit_label" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- MODAL HEADER -->
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="submit_title">Submit Answers</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- MODAL BODY -->
+            <div class="modal-body">
+                <form class="submission_area">
+                    <label for="submit_password" id="label_password">Password</label>
+                    <input id="submit_password" name="submit_password" autocomplete="off">
+                    <label for="submit_password" id="label_wordmap">Word Map</label>
+                    <input id="submit_wordmap" name="input_wordmap" autocomplete="off">
+                </form>
+                <div id="letter-box-container"></div>
+            </div>
+
+            <!-- MODAL FOOTER -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="validate()" id="submit">Submit</button>
+                <button id="close_button" type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="setMessage('reset', null, null)">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+    <!-- modal: credits -->
+    <div class="modal fade" id="modal_credits" tabindex="-1" aria-labelledby="credits_label" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- MODAL HEADER -->
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="credits_title">Credits</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <!-- MODAL BODY -->
+            <div class="modal-body">
+                <p>&#169; Kalvin Nguyen 2024</p>
+                <p> Find this project on <a href="https://github.com/kalvintn/the_mollusk">GitHub.</a></p>
+                <p>
+                    Graphics used in this project can be found GitHub <em>assets</em> folder. All images from Canva 
+                    were free and open-source.  Freepik registered users may use free images with attribution; 
+                    find more at the source <a href="https://www.freepik.com/">https://www.freepik.com/</a>.
+                    Additionally, original images from Freepik can be found in this
+                    <a href="https://www.freepik.com/collection/books/6606299" target="_blank">custom collection</a>.
+                    Flaticon users with a premium subscription may use images without attribution. 
+                    Flaticon usage licenses available upon your request. Made under the MIT License.
+                </p>
+            </div>
+
+            <!-- MODAL FOOTER -->
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Thanks</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+    <!-- hidden modal: congrats -->
+    <div class="modal fade hidden" id="modal_congrats" tabindex="-1" aria-labelledby="modal_congrats" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- BODY -->
+            <div class="modal-body">
+                Thank you for participating. Choosing to spend your precious time someplace is a virtue to any creator.
+                Enjoy the winner's room.
+                <br><br>
+                <i>- Kalvin Nguyen</i>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    
+  
+</body>
+</html>
+
