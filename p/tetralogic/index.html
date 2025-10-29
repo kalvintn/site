@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="author" content="Kalvin Nguyen">
+    <meta name="description" content="A web puzzle game similar to NYT Connections.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TetraLogic</title>
+
+    <!-- Bootstrap, Favicons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/f773a491f7.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+
+    <!-- Links -->
+    <link rel="stylesheet" href="tetralogic.css">
+    <script src="tetralogic.js" defer></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <!-- LOGO -->
+            <img src="logo.png" width="40px"> <h2>TetraLogic</h2>
+
+
+            <!-- "HOW TO PLAY" MODAL -->
+            <button id="howToPlayBtn" class="bg-dark"><i class="fa-solid fa-circle-question fa-lg"></i> How to Play</button>
+            <div class="modal fade" id="howToPlayModal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">How to Play</h5>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="fa-ul">
+                            <li><span class="fa-li"><i class="fa-solid fa-star"></i></span>Choose 4 items to form a group.</li>
+                            <li><span class="fa-li"><i class="fa-solid fa-star"></i></span>Each group has some aspect that relates them.</li>
+                            <li><span class="fa-li"><i class="fa-solid fa-star"></i></span>Find all the groups and win. Happy hunting!</li>
+
+                        </ul>
+                        <div class="sample_boxes">
+                            <div id="easy_box"><p>Easy</p></div>
+                            <div id="medium_box"><p>Medium</p></div>
+                            <div id="hard_box"><p>Hard</p></div>
+                            <div id="expert_box"><p>Expert</p></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-close-play" data-dismiss="modal">Close</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- MAIN -->
+    <main>
+        <!-- TOP TEXT -->
+        <div class="text-display">
+            <p id="livesleft">Lives left: 4</p>
+            <p id="selectionoutcome">Welcome!</p>
+        </div>
+
+
+        <!-- MAIN GAME AREA -->
+        <div class="items-list"></div>
+        
+
+        <!-- CONTROL BUTTONS -->
+        <div class="buttons-list">
+            <button class="bg-dark new-game" onclick="newGame()">New Game</button>
+            <button class="bg-dark" onclick="shuffle()">Shuffle</button>
+            <button class="bg-dark" onclick="clearSelection()">Deselect All</button>
+            <button class="bg-dark" onclick="submit()">Submit</button>
+        </div>
+    </main>
+
+
+
+    <footer class="bg-dark">
+        <!-- SOCIALS -->
+        <p>Made by Kalvin Nguyen</p>
+        <div class="socials">
+            <button class="bg-dark"><a href="https://www.instagram.com/kalvinnguyen1/"><i class="fa-brands fa-instagram fa-xl"></i></a></button>
+            <button class="bg-dark"><a href="https://github.com/kalvintn"><i class="fa-brands fa-github fa-xl"></i></a></button>
+        </div>
+
+
+        <!-- "LEARN MORE" MODAL -->
+        <button id="learnMoreBtn" class="bg-dark"><i class="fa-solid fa-circle-info fa-lg"></i> Learn More</button>
+        <div class="modal fade" id="learnMoreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Learn More</h5>
+                </div>
+                <div class="modal-body">
+                    <p>This game was inspired by New York Times's <a href="https://www.nytimes.com/games/connections" target="_blank">Connections</a> <img src="connections.png" alt="game logo" width="20px" style="border-radius: 20%;"></p>
+                    <br />
+                    <p>Want to see how this project was made? <br /> See it on <a href="https://github.com/kalvintn/TetraLogic">GitHub</a>.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-close-play" data-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

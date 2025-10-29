@@ -1,0 +1,139 @@
+/* Global */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --color-main: #2f4454;
+    --color-second: #376e6f;
+}
+body {
+    height: 100vh; /* full height body */
+    width: 99vw;
+    background-image: url('images/nighthawks.jpeg');
+    background-size: cover;
+}
+#main > * {
+    margin-left: 2.4vw;
+}
+
+
+
+/* HEADER */
+header {
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+    color: white;
+    font-size: 1em;
+    font-family: 'Noto Serif Thai', serif;
+    font-weight: bold;
+    text-align: right;
+}
+header > p {
+    position: absolute;
+    left: 0;
+    right: 0.7em;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0.7em;
+}
+
+
+
+/* JUKEBOX STYLES */
+#main {
+    margin-bottom: 2em;
+}
+svg {
+    width: 400px;
+    height: 400px;
+    margin-top: 10em;
+    margin-bottom: 1.5em;
+} 
+#label {
+    fill: white;
+} 
+@keyframes spin {
+    100%{transform: rotate(360deg);}
+}
+#record {
+    transform-origin: center center;
+    animation: spin 5s linear infinite;
+    animation-play-state: paused;
+}
+.line {
+    stroke: white;
+}
+image { /* background image */
+    border-radius: 100%;
+    opacity: 0.8;
+    width: 100%;
+}
+#label {
+    opacity: 0.4;
+}
+text {
+    text-shadow: 2px 1px 10px yellow;
+    font-size: 15px;
+    font-family: 'Anton', sans-serif;
+}
+
+
+
+/* Control Buttons */
+.button-group {
+    display: block;
+    padding-left: 3.5vw;
+}
+button {
+    width: 4em;
+    background-color: #283538;
+    padding: 15px;
+    border: 5px double #368257;
+    border-radius: 25%;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+i {
+    color: white;
+}
+
+
+
+/* FOOTER DETAILS */
+footer {
+    position: absolute;
+    left: 0;
+    right: 0.7em;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0.7em;
+
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 1em;
+    color: white;
+    text-align: right;
+}
+
+
+
+/* TABLET-SIZED DISPLAY */
+@media screen and (max-width: 768px) {
+    body {
+        text-align: center;
+    }
+    svg {
+        margin: 1em auto;
+    }
+    .button-group {
+        padding-left: 0;
+        margin: 0 auto;
+    }
+    footer > p{
+        display: block;
+        text-align: center;
+    }
+}

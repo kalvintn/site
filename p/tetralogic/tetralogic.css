@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+/* GLOBAL STYLES */
+* {
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+
+}
+body, html {
+    min-height: 100vh;
+}
+/* difficulty colors */
+:root {
+    --color-easy: rgba(52, 152, 219, 0.95);
+    --color-medium: rgba(46, 204, 113, 0.95);
+    --color-hard: rgba(254, 255, 0, 0.95);
+    --color-expert: rgba(231, 76, 60, 0.95);
+}
+/* icons */
+i {
+    color: #79b5ec;
+    border-radius: 100%;
+}
+
+
+
+
+/* HEADER */
+header {
+    /* static top */
+    position: absolute;
+    top: 0;
+    width: 100vw;
+}
+/* NAVIGATION */
+nav {
+    color: white;
+}
+nav > * {
+    margin: 5px;
+}
+/* logo */
+nav h2 {
+    font-size: 1.7em;
+}
+nav button {
+    color: white;
+    padding: 5px;
+    border: 3px outset white;
+    margin-left: auto; /* flex buttons to right of container */
+}
+
+
+
+
+/* MODALS */
+.modal-content {
+    color: black;
+}
+.modal-body ul {
+    margin-left: 2rem;
+}
+.fa-star {
+    color: yellow;
+    text-shadow: 1.5px 1.5px 1px black;
+    list-style-position: inside;
+}
+.sample_boxes {
+    margin-left: 4em;
+}
+.sample_boxes > div {
+    padding-left: 10px;
+    border-left: 15px solid black;
+}
+/* Boxes with sample colors */
+#easy_box {
+    border-left: 15px solid var(--color-easy);
+}
+#medium_box {
+    border-left: 15px solid var(--color-medium);
+}
+#hard_box {
+    border-left: 15px solid var(--color-hard);
+}
+#expert_box {
+    border-left: 15px solid var(--color-expert);
+}
+
+
+
+
+/* MAIN GAME AREA */
+main {
+    /* background */
+    background: linear-gradient(to bottom, #0c164f, #1d1135);
+
+    /* Static alignment between header & footer */
+    width: 100%;
+    position: absolute;
+    top: 4.14em;
+    bottom: 3.1em;
+
+    /* Flex alignment of items list & buttons list */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/* top text display */
+.text-display {
+    width: 70%;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border: 3px solid #FF007F;
+    box-shadow: 0px 0px 20px #FF1493;
+    margin-top: 1.5em;
+}
+.text-display > * {
+    font-size: 1.1em;
+    margin: 0.5em auto;
+}
+/* items list */
+.items-list {
+    /* small centered positioning */
+    width: minmax(90%, auto);
+    margin: 2em auto 3em;
+
+    /* Grid layout for items */
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    place-items: center stretch;
+    grid-gap: 10px;
+    
+}
+/* item styles */
+.item {
+    font-size: 1.5vw;
+    color: midnightblue;
+    background-color: #b8b8b8;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 1%;
+    margin: 0;
+}
+/* NOTE: must be after .item */
+.selected { 
+    background-color: #898989;
+}
+/* CONTROL BUTTONS */
+.buttons-list button {
+    color: white;
+    padding: 8px 10px;
+    margin: auto 5px;
+    border: 3px outset #ff6f61;
+} 
+/* new game button */
+.buttons-list .new-game {
+    border: 3px groove #61fff7;
+    margin-right: 1.5em;
+}
+
+
+
+
+/* FOOTER */
+footer {
+    color: white;
+    padding: 3px;
+
+    /* Static alignment at bottom */
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+
+    /* flex child items */
+    display: flex;
+    align-items: center;
+}
+footer > * {
+    margin: 5px;
+}
+/* socials */
+.socials button {
+    border: none;
+}
+/* learn more button */
+footer > button {
+    color: white;
+    padding: 5px;
+    border: 3px outset white;
+    margin-left: auto; /* flex buttons to right of container */
+}
+
+
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 768px) {
+    .items-list {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

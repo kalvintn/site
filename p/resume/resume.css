@@ -1,0 +1,123 @@
+/* Global Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+
+/* Header */
+header {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+}
+header .btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+header button {
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    width: 12em;
+    padding: 6px 12px;
+    border: 3px solid black;
+    border-radius: 10px;
+    outline: none;
+}
+header button:focus {
+    outline: none;
+}
+
+/* download buttons */
+.word {
+    background-color: #2b579a;
+}
+.pdf {
+    background-color: #FF0000;
+}
+
+/* style buttons */
+header .stylings button {
+    color: white;
+    font-weight: 600;
+    background: linear-gradient(to right, #614385, #516395);
+    border: 3px solid black;
+}
+header .stylings button:hover {
+    background: linear-gradient(to right, rgba(97, 67, 133, 0.8), rgba(81, 99, 149, 0.8));
+}
+header p {
+    text-decoration: underline;
+    font-size: 1.1em;
+    margin: 0 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* remove default bullets */
+ul {
+    list-style-type: none;
+}
+
+/* list items */
+.list-ic li {
+    position: relative;
+}
+/* bullet point */
+.list-ic li span {
+    display: inline-block;
+    font-weight: 800;
+    width: 1.7em;
+    height: 1.7em;
+    text-align: center;
+    line-height: 2em;
+    border-radius: 1em;
+    background: #18bc9c;
+    color: white;
+    position: relative;
+    
+    margin-right: 0.3em; /* space between bullet and words */
+}
+.list-ic li::before {
+    content: '';
+    position: absolute;
+    background: #18bc9c;
+    z-index: -1;
+}
+.list-ic.vertical {
+    padding: 0;
+    margin: 0;
+}
+.list-ic.vertical li {
+    list-style-type: none;
+    text-align: left;
+}
+.list-ic.vertical li {
+    margin: 1.4em 0;
+}
+/* connecting line */
+.list-ic.vertical li::before {
+    top: -40px;
+    left: 12px;
+    width: 0.2em;
+    height: 4em;
+}
+.list-ic li:first-child::before {
+    display: none;
+}

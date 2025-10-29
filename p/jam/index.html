@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aria Jam</title>
+
+    <!-- links -->
+    <link rel="stylesheet" href="aria_jam.css">
+    <script src="aria_jam.js" defer></script>
+
+    <!-- fonts/icos -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <script src="https://kit.fontawesome.com/f773a491f7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <p>Kalvin Nguyen</p>
+    </header>
+
+    <!-- MAIN AREA = Record + Buttons -->
+    <div id="main">
+        <svg viewBox="0 0 400 400">
+            <defs>
+                <clipPath id="circle-clip">
+                    <circle cx="200" cy="200" r="200" />
+                </clipPath>
+            </defs>
+            <g id="record">
+                <g> <!-- ORDERING MATTERS, layout for text overlay image -->
+                    <circle r="200" cx="200" cy="200"/>
+                    <circle class="line" r="180" cx="200" cy="200" />
+                    <circle class="line" r="160" cx="200" cy="200" />
+                    <circle class="line" r="140" cx="200" cy="200" />
+                    <image id="album_img" xlink:href="images/in_rainbows.jpeg" x="0" y="0" width="100px" height="400px" clip-path="url(#circle-clip)" preserveAspectRatio="xMidYMid slice" />
+                </g>
+                <g>
+                    <circle id="label" cx="200" cy="200" r="90" />
+                    <circle id="dot" cx="200" cy="200" r="6" />
+                    <text id="song_title" y="180" x="125">-</text>  
+                    <text id="artist_name" y="230" x="125">-</text>    
+                </g>
+            </g>
+        </svg>
+        <audio id="audiospace"></audio>
+
+        <!-- MANUALLY CONTROL COORDS :( -->
+        <!-- CONTROL BUTTONS -->
+        <div class="button-group">
+            <button id="rewind" onclick="previous()"><i class="fa-solid fa-backward"></i></button>
+            <button id="replay" onclick="replay()"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+            <button id="playButton" onclick="play()"><i class="fa-solid fa-play"></i></button>
+            <button id="mute" onclick="toggleMute()"><i class="fa-solid fa-volume-high"></i></button>
+            <button id="forward" onclick="next()"><i class="fa-solid fa-forward"></i></button>
+        </div>
+
+    </div>
+
+    <!-- Painting description -->
+    <footer>
+        <p>"Nighthawks"</p>
+        <p>Edward Hopper</p>
+        <p>1942</p>
+    </footer>
+
+</body>
+</html>
