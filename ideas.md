@@ -14,5 +14,3 @@
 - password game: given a notecard about the identity, some facts about a user. You have their username. You must guess their password. Social engineering: you can talk to NPCs, they talk about their lives, and may reveal personal details leading to a password.
 - rougelike typing game where works [begin] progressively harder while the user types away, getting some sort of
   currency, making it easier, getting shorter words, more money per word, multipliers, etc. until some end state reached
-
-Flaticon subscription???????
