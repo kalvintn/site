@@ -36,7 +36,14 @@ body {
 }
 
 
-
+/* WIP SIGN */
+.wip {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 10em;
+    opacity: 0.6;
+}
 
 
 /* THE CHAIN */
