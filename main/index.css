@@ -62,16 +62,6 @@ body {
     display: none;
 }
 
-#chain-text {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-
-    color: white;
-    font-size: 1.4em;
-    font-weight: bold;
-}
-
 .chain {
     position: absolute;
     top: -10%;
