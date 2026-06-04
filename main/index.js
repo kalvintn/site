@@ -46,7 +46,6 @@ async function load_site() {
 
 // accessibility: users can pull chain with TAB + ENTER
 chain.addEventListener("keydown", function (event) {
-  // check if ENTER pressed
   if (event.keyCode === 13) {
     load_site();
   }
